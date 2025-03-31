@@ -1,5 +1,6 @@
 package belajar_restful.model;
 
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -11,17 +12,19 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class RegisterUserRequest {
+public class CreateContactRequest {
 
     @NotBlank
     @Size(max = 100)
-    private String username;
+    private String firstName;
 
-    @NotBlank
     @Size(max = 100)
-    private String password;
+    private String lastName;
 
-    @NotBlank
     @Size(max = 100)
-    private String name;
+    @Email
+    private String email;
+
+    @Size(max = 100)
+    private String phone;
 }

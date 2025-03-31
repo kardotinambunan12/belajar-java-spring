@@ -1,16 +1,22 @@
 package belajar_restful.model;
 
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.AllArgsConstructor;
+import lombok.*;
 
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+public class WebResponse <T> {
 
-public class WebResponse <T>{
+    private String errors;
 
     private T data;
-    private String errors;
+
+
+    private PagingResponse paging;
+
+
+
 
 }

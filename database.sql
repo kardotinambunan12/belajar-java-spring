@@ -3,7 +3,7 @@ CREATE DATABASE `java-spring`;
 
 show databases ;
 
-use `java-spring`;
+use java-spring;
 
 
 create table users
@@ -54,7 +54,15 @@ create table addresses(
 
 )ENGINE InnoDB;
 
-
+select * from users;
 select * from addresses;
 
 describe addresses;
+
+delete from addresses;
+
+delete from contacts;
+
+
+delete from users;
+

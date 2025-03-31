@@ -27,9 +27,9 @@ public class User {
 
     private String token;
 
-    @Column(name = "token_expired_at")
+    @Column(name = "token_exipred_at")
     private Long tokenExpiredAt;
 
-    @OneToMany(mappedBy = "user ")
+    @OneToMany(mappedBy = "user")
     private List<Contact> contacts;
 }
